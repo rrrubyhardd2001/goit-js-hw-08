@@ -1,7 +1,11 @@
 function calcAverageCalories(days) {
   let rezult = 0;
+  let checkToempty = days.length;
+  if (checkToempty === 0) {
+    return 0;
+  }
   let totalArr = Object.values(days);
-  for (i = 0; i < totalArr.length; i++) {
+  for (let i = 0; i < totalArr.length; i++) {
     rezult += totalArr[i].calories;
   }
   return rezult / 7;
